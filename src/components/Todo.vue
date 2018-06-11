@@ -19,9 +19,9 @@
 <script>
 export default {
   name: "TodoApp",
-  props: ["title"],
   data() {
     return {
+      title: "Todo App",
       todo: "",
       todos: [
         {
