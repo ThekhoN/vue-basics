@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <h4>todo app</h4>
+  <div id="todo-app">
+    <h4>{{title}}</h4>
     <div class="todo__container">
       <ul class="todo__ul">
         <li class="todo__li" v-for="todo in todos" v-bind:key="todo.id">
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-// import Test from "@/components/Test";
 export default {
-  name: "App",
+  name: "TodoApp",
+  props: ["title"],
   data() {
     return {
       todo: "",
@@ -82,9 +82,6 @@ export default {
       this.todo = "";
     }
   }
-  //   components: {
-  //     Test: Test
-  //   }
 };
 </script>
 
